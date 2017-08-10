@@ -32,3 +32,12 @@ console.log(rabbit);
 console.log(credits);
 
 /* Play here */
+
+var fibonnacci = [];
+fibonnacci[0] = 0;
+fibonnacci[1] = 1;
+
+for (var i = 2; i < 100; i++) {
+    fibonnacci[i] = fibonnacci[i - 1] + fibonnacci[i - 2];
+    console.log(fibonnacci[i]);
+}
