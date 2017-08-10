@@ -20,11 +20,17 @@ console.log(reverseString);
  * Given two strings, return true if they are anagrams of one another
  * */
 
- let wordOne = "Pascal Obispo";
- let wordTwo =  "Pablo Picasso";
- // => returns true !
+let wordOne = "Pascal Obispo";
+let wordTwo =  "Pablo Picasso";
+// => returns true !
+let wordOnesorted = wordOne.toUpperCase().split('').sort().join('');
+let wordTwosorted = wordTwo.toUpperCase().split('').sort().join('');
 
-
+if (wordOnesorted === wordTwosorted) {
+    console.log("this is an anagram");
+} else {
+    console.log("this is not an anagram");
+}
 
 
  /*
@@ -32,12 +38,15 @@ console.log(reverseString);
  * Case sensitivity should be taken into account
  * */
 
-let palindrome = "Eh ! ça va la vache";
+/*let palindrome = "Eh ! ça va la vache";
+
+let palindromeNoSpace = palindrome.split('').join('');
+console.log(palindromeNoSpace);
 
 let isPalindrome = palindrome.split('').reverse().join('');
 
-if (palindrome === isPalindrome) {
+if (palindrome.split('').reverse().join('') === isPalindrome) {
     console.log("This is a palindrome");
 } else {
     console.log("This is not a palindrome");
-}
+}*/
