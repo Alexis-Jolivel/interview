@@ -2,7 +2,19 @@
  * Given a string, reverse each word in a the sentence
  * */
 
- let reverse = "Mary would you mary me";
+let reverse = "Mary would you mary me";
+
+let reverseWords = reverse.split(' ');
+let reverseArray = [];
+
+for (var i = 0; i < reverseWords.length; i++) {
+    reverseArray[i] = reverseWords[i].split('').reverse().join('');
+}
+
+let reverseString = reverseArray.join(' ');
+
+console.log(reverseString);
+
 
  /*
  * Given two strings, return true if they are anagrams of one another
@@ -13,9 +25,19 @@
  // => returns true !
 
 
+
+
  /*
  * Check if a given string is a palindrome "Rotor" is a palindrome. "Race Car" should also be considered a palindrome.
  * Case sensitivity should be taken into account
  * */
 
- let palindrome = "Eh ! ça va la vache";
+let palindrome = "Eh ! ça va la vache";
+
+let isPalindrome = palindrome.split('').reverse().join('');
+
+if (palindrome === isPalindrome) {
+    console.log("This is a palindrome");
+} else {
+    console.log("This is not a palindrome");
+}
